@@ -10,24 +10,19 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class DiscoverViewController: UIViewController {
+final class DiscoverViewController: BaseViewController {
     var viewModel: DiscoverViewModel!
     
     @IBOutlet weak var carouselsView: DiscoverMainView!
     
     private let disposeBag = DisposeBag()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        bindViewModel()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    private func bindViewModel() {
+    override func bindViewModel() {
         let input = DiscoverViewModel.Input(ready: rx.viewWillAppear.asDriver(),
                                             selected: carouselsView.selectedIndex.asDriver(onErrorJustReturn: (0, 0)))
         

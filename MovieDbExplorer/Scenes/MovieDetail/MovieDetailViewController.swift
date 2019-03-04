@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import Nuke
 
-final class MovieDetailViewController: UIViewController {
+final class MovieDetailViewController: BaseViewController {
     var viewModel: MovieDetailViewModel!
     
     @IBOutlet weak var headerView: MovieDetailHeaderView!
@@ -20,18 +20,13 @@ final class MovieDetailViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     
     private let disposeBag = DisposeBag()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        bindViewModel()
-    }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    private func bindViewModel() {
+    override func bindViewModel() {
         let input = MovieDetailViewModel.Input(ready: rx.viewWillAppear.asDriver(),
                                                backTrigger: backButton.rx.tap.asDriver())
         
