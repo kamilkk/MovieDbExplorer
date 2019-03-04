@@ -27,10 +27,6 @@ final class DiscoverViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     private func bindViewModel() {
         let input = DiscoverViewModel.Input(ready: rx.viewWillAppear.asDriver(),
                                             selected: carouselsView.selectedIndex.asDriver(onErrorJustReturn: (0, 0)))

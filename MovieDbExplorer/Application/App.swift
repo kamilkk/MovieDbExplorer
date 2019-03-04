@@ -25,7 +25,7 @@ final class App {
         searchViewController.viewModel = searchViewModel
         
         let tabBarController = UITabBarController()
-        tabBarController.tabBar.barTintColor = UIColor(red: 18/255, green: 18/255, blue: 18/255, alpha: 1.0)
+        tabBarController.tabBar.barTintColor = UiHelpers.appColor()
         tabBarController.tabBar.tintColor = .white
         
         discoverNavigationController.tabBarItem = UITabBarItem(title: "Discover", image: nil, selectedImage: nil)

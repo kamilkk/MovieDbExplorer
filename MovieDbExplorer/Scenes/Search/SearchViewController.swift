@@ -34,10 +34,6 @@ final class SearchViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     private func bindViewModel() {
         let input = SearchViewModel.Input(searchText: searchTextField.rx.text.orEmpty.asDriver(),
                                           selectedCategoryIndex: segmentedControl.rx.value.asDriver(),

@@ -13,8 +13,12 @@ import RxSwift
 import RxCocoa
 
 final class DiscoverMainView: UIView {
+    private var pipeline = Nuke.ImagePipeline.shared
+    
     private var dataSource: [CarouselViewModel]?
     private var storedOffsets = [Int: CGFloat]()
+    
+    
     @IBOutlet private var contentView: UIView!
     @IBOutlet private weak var tableView: UITableView!
     private let selectedIndexSubject = PublishSubject<(Int, Int)>()
@@ -105,7 +109,10 @@ extension DiscoverMainView: UICollectionViewDataSource {
         cell.titleLabel.text = item.title
         cell.subtitleLabel.text = item.subtitle
         if let url = item.imageUrl {
-            Nuke.loadImage(with: URL(string: url)!, into: cell.imageView)
+            let request = ImageRequest(url: URL(string: url)!)
+            var options = ImageLoadingOptions(transition: .fadeIn(duration: 0.25))
+            options.pipeline = self.pipeline
+            Nuke.loadImage(with: request, options: options, into: cell.imageView)
         }
         return cell
     }

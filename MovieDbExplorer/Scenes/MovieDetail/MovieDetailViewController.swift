@@ -31,10 +31,6 @@ final class MovieDetailViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     private func bindViewModel() {
         let input = MovieDetailViewModel.Input(ready: rx.viewWillAppear.asDriver(),
                                                backTrigger: backButton.rx.tap.asDriver())

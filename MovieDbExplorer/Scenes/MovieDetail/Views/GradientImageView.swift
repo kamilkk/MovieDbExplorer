@@ -20,12 +20,15 @@ final class GradientImageView: UIImageView {
     }
     
     private func setup() {
-        layer.backgroundColor = UIColor.black.cgColor
+        layer.backgroundColor = UIColor.white.cgColor
         layer.opacity = 0.1
         
         let gradient = CAGradientLayer()
         gradient.frame = bounds
-        gradient.colors = [UIColor.clear.cgColor, UIColor(red: 18/255, green: 18/255, blue: 18/255, alpha: 1.0).cgColor, UIColor(red: 18/255, green: 18/255, blue: 18/255, alpha: 1.0).cgColor, UIColor.clear.cgColor]
+        gradient.colors = [UIColor.clear.cgColor,
+                           UIColor(red: 18/255, green: 18/255, blue: 18/255, alpha: 1.0).cgColor,
+                           UIColor(red: 18/255, green: 18/255, blue: 18/255, alpha: 1.0).cgColor,
+                           UIColor.clear.cgColor]
         gradient.locations = [0, 0.1, 0.9, 1]
         layer.mask = gradient
     }

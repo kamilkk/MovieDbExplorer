@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B582CF29D34F7B79A912182 /* Pods_MovieDbExplorer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985467163F4596A81A3699B4 /* Pods_MovieDbExplorer.framework */; };
+		9A6AFA4A222D42CC00053088 /* UiHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6AFA49222D42CC00053088 /* UiHelpers.swift */; };
 		9A9DC77E222D17A900AAF4E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9DC77D222D17A900AAF4E6 /* AppDelegate.swift */; };
 		9A9DC783222D17A900AAF4E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A9DC781222D17A900AAF4E6 /* Main.storyboard */; };
 		9A9DC785222D17AA00AAF4E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9DC784222D17AA00AAF4E6 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		239D3D3A72DAD9303A2E1F3C /* Pods-MovieDbExplorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDbExplorer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieDbExplorer/Pods-MovieDbExplorer.release.xcconfig"; sourceTree = "<group>"; };
 		985467163F4596A81A3699B4 /* Pods_MovieDbExplorer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieDbExplorer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A6AFA49222D42CC00053088 /* UiHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiHelpers.swift; sourceTree = "<group>"; };
 		9A9DC77A222D17A900AAF4E6 /* MovieDbExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDbExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9DC77D222D17A900AAF4E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A9DC782222D17A900AAF4E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				9A9DC7AA222D204A00AAF4E6 /* ActivityIndicator.swift */,
 				9A9DC7B1222D212200AAF4E6 /* UIStoryboard+ViewControllers.swift */,
 				9A9DC7E6222D2E0A00AAF4E6 /* UIViewController+Rx.swift */,
+				9A6AFA49222D42CC00053088 /* UiHelpers.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 			files = (
 				9A9DC7A8222D201F00AAF4E6 /* DiscoverNavigator.swift in Sources */,
 				9A9DC791222D1ACE00AAF4E6 /* App.swift in Sources */,
+				9A6AFA4A222D42CC00053088 /* UiHelpers.swift in Sources */,
 				9A9DC799222D1CFC00AAF4E6 /* HttpClient.swift in Sources */,
 				9A9DC7BC222D244200AAF4E6 /* LoginNavigator.swift in Sources */,
 				9A9DC77E222D17A900AAF4E6 /* AppDelegate.swift in Sources */,
