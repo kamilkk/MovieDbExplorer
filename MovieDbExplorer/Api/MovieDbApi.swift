@@ -32,7 +32,7 @@ protocol MovieDbApiProvider: MovieDbApiMoviesProvider, MovieDbApiPeopleProvider,
 
 final class MovieDbApi: MovieDbApiProvider {
     private struct Constants {
-        static let apiKey = "ab41356b33d100ec61e6c098ecc92140"
+        static let apiKey = "Please use your own key here"
     }
     
     private let httpClient: HttpClientProvider
