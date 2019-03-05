@@ -14,9 +14,10 @@ import Nuke
 final class MovieDetailViewController: BaseViewController {
     var viewModel: MovieDetailViewModel!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var headerView: MovieDetailHeaderView!
     @IBOutlet weak var tipsView: MovieDetailTipsView!
-    @IBOutlet weak var posterImageView: GradientImageView!
+    @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var backButton: UIButton!
     
     private let disposeBag = DisposeBag()

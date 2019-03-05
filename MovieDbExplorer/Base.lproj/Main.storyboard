@@ -169,20 +169,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aquaman" translatesAutoresizingMaskIntoConstraints="NO" id="N45-tr-N7H" customClass="GradientImageView" customModule="MovieDbExplorer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="562.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="N45-tr-N7H" secondAttribute="height" multiplier="2/3" id="egp-yY-F8I"/>
-                                </constraints>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KgE-Li-psl">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tai-Br-SGz" userLabel="Content VIew">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Uh-Vc-Uaf">
+                                                <rect key="frame" x="20" y="20" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="0Td-cO-dlq"/>
+                                                    <constraint firstAttribute="width" constant="35" id="BQi-KA-d3v"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.94901960780000005" green="0.42352941179999998" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="back_arrow"/>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFR-xe-0VS" customClass="MovieDetailHeaderView" customModule="MovieDbExplorer" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="60" width="375" height="128"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" placeholder="YES" id="k9h-aG-bbI"/>
+                                                </constraints>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSR-gb-Enn" customClass="MovieDetailTipsView" customModule="MovieDbExplorer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="208" width="375" height="128"/>
+                                                <rect key="frame" x="0.0" y="188" width="375" height="128"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" placeholder="YES" id="CVp-Id-Gzk"/>
@@ -194,27 +204,21 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Uh-Vc-Uaf">
-                                                <rect key="frame" x="20" y="20" width="35" height="35"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5B7-h5-4pH">
+                                                <rect key="frame" x="0.0" y="316" width="375" height="560"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="0Td-cO-dlq"/>
-                                                    <constraint firstAttribute="width" constant="35" id="BQi-KA-d3v"/>
+                                                    <constraint firstAttribute="height" constant="560" id="1dF-Pg-5fp"/>
                                                 </constraints>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" image="back_arrow"/>
-                                            </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFR-xe-0VS" customClass="MovieDetailHeaderView" customModule="MovieDbExplorer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="60" width="375" height="128"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="128" placeholder="YES" id="k9h-aG-bbI"/>
-                                                </constraints>
-                                            </view>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="5B7-h5-4pH" firstAttribute="leading" secondItem="tai-Br-SGz" secondAttribute="leading" id="BO5-Yz-0BR"/>
+                                            <constraint firstAttribute="trailing" secondItem="5B7-h5-4pH" secondAttribute="trailing" id="Da1-Ae-0Xz"/>
                                             <constraint firstItem="1Uh-Vc-Uaf" firstAttribute="top" secondItem="tai-Br-SGz" secondAttribute="top" constant="20" id="HTP-bK-UYj"/>
-                                            <constraint firstItem="RSR-gb-Enn" firstAttribute="top" secondItem="XFR-xe-0VS" secondAttribute="bottom" constant="20" id="OID-tJ-4PD"/>
+                                            <constraint firstItem="5B7-h5-4pH" firstAttribute="top" secondItem="RSR-gb-Enn" secondAttribute="bottom" id="NnV-El-zYj"/>
+                                            <constraint firstItem="RSR-gb-Enn" firstAttribute="top" secondItem="XFR-xe-0VS" secondAttribute="bottom" id="OID-tJ-4PD"/>
+                                            <constraint firstAttribute="height" constant="667" id="Vct-V0-QMY"/>
                                             <constraint firstItem="XFR-xe-0VS" firstAttribute="top" secondItem="tai-Br-SGz" secondAttribute="top" constant="60" id="Vjx-iZ-FKx"/>
                                             <constraint firstAttribute="trailing" secondItem="XFR-xe-0VS" secondAttribute="trailing" id="WVd-JR-6Y9"/>
                                             <constraint firstItem="XFR-xe-0VS" firstAttribute="leading" secondItem="tai-Br-SGz" secondAttribute="leading" id="Wpc-XB-o3l"/>
@@ -229,28 +233,25 @@
                                     <constraint firstItem="tai-Br-SGz" firstAttribute="leading" secondItem="KgE-Li-psl" secondAttribute="leading" id="IIY-Yj-kDb"/>
                                     <constraint firstItem="tai-Br-SGz" firstAttribute="top" secondItem="KgE-Li-psl" secondAttribute="top" id="XkY-Tl-cdK"/>
                                     <constraint firstAttribute="trailing" secondItem="tai-Br-SGz" secondAttribute="trailing" id="gQv-bu-zFf"/>
+                                    <constraint firstItem="tai-Br-SGz" firstAttribute="centerX" secondItem="KgE-Li-psl" secondAttribute="centerX" id="jqI-dd-ExO"/>
                                     <constraint firstAttribute="bottom" secondItem="tai-Br-SGz" secondAttribute="bottom" id="w0H-26-CoD"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="N45-tr-N7H" firstAttribute="leading" secondItem="6l6-HR-e0d" secondAttribute="leading" id="22c-6N-EGc"/>
                             <constraint firstItem="6l6-HR-e0d" firstAttribute="trailing" secondItem="KgE-Li-psl" secondAttribute="trailing" id="24f-o3-XWt"/>
                             <constraint firstItem="KgE-Li-psl" firstAttribute="top" secondItem="6l6-HR-e0d" secondAttribute="top" id="7Rq-bS-Hfo"/>
-                            <constraint firstItem="N45-tr-N7H" firstAttribute="top" secondItem="mbJ-jP-uul" secondAttribute="top" id="Osj-rq-O3X"/>
-                            <constraint firstItem="N45-tr-N7H" firstAttribute="trailing" secondItem="6l6-HR-e0d" secondAttribute="trailing" id="Quq-Gn-BmC"/>
-                            <constraint firstItem="tai-Br-SGz" firstAttribute="width" secondItem="mbJ-jP-uul" secondAttribute="width" id="c48-fR-nSO"/>
                             <constraint firstItem="6l6-HR-e0d" firstAttribute="bottom" secondItem="KgE-Li-psl" secondAttribute="bottom" id="lFK-Vq-2Yc"/>
                             <constraint firstItem="KgE-Li-psl" firstAttribute="leading" secondItem="6l6-HR-e0d" secondAttribute="leading" id="m3w-RB-NIn"/>
-                            <constraint firstItem="tai-Br-SGz" firstAttribute="height" secondItem="mbJ-jP-uul" secondAttribute="height" priority="250" id="yEb-ry-FRr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6l6-HR-e0d"/>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="1Uh-Vc-Uaf" id="CWU-gl-JPv"/>
                         <outlet property="headerView" destination="XFR-xe-0VS" id="bXl-n5-QhB"/>
-                        <outlet property="posterImageView" destination="N45-tr-N7H" id="meP-Xu-nFk"/>
+                        <outlet property="posterImageView" destination="5B7-h5-4pH" id="9vC-w0-QTP"/>
+                        <outlet property="scrollView" destination="KgE-Li-psl" id="oyr-2i-sl3"/>
                         <outlet property="tipsView" destination="RSR-gb-Enn" id="CGI-dP-r7f"/>
                     </connections>
                 </viewController>
@@ -266,6 +267,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2u-Gy-BI1">
+                                <rect key="frame" x="0.0" y="138" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.42352941179999998" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="eKe-XR-nxJ"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6O-LD-cJK">
                                 <rect key="frame" x="20" y="40" width="335" height="40"/>
                                 <subviews>
@@ -309,12 +317,12 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UcB-2v-MtL">
-                                <rect key="frame" x="0.0" y="138" width="375" height="529"/>
+                                <rect key="frame" x="0.0" y="139" width="375" height="528"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fP8-aJ-uPo">
                                 <rect key="frame" x="87.5" y="90" width="200" height="29"/>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.42352941179999998" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="IB5-XQ-b5P"/>
                                 </constraints>
@@ -322,16 +330,20 @@
                                     <segment title="Movies"/>
                                     <segment title="People"/>
                                 </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.94901960780000005" green="0.42352941179999998" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.94901960780000005" green="0.42352941179999998" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="p2u-Gy-BI1" firstAttribute="leading" secondItem="Wwb-yP-Bqb" secondAttribute="leading" id="1d6-QG-XOn"/>
+                            <constraint firstItem="UcB-2v-MtL" firstAttribute="top" secondItem="p2u-Gy-BI1" secondAttribute="bottom" id="AxZ-i4-JGe"/>
                             <constraint firstItem="v6O-LD-cJK" firstAttribute="leading" secondItem="aKL-kb-aEf" secondAttribute="leading" constant="20" id="Tgg-JT-EmU"/>
                             <constraint firstItem="fP8-aJ-uPo" firstAttribute="centerX" secondItem="aKL-kb-aEf" secondAttribute="centerX" id="WHY-QX-Pxt"/>
-                            <constraint firstItem="UcB-2v-MtL" firstAttribute="top" secondItem="fP8-aJ-uPo" secondAttribute="bottom" constant="20" id="XFf-JK-rtt"/>
                             <constraint firstItem="aKL-kb-aEf" firstAttribute="trailing" secondItem="v6O-LD-cJK" secondAttribute="trailing" constant="20" id="XWm-Rq-DRR"/>
+                            <constraint firstItem="p2u-Gy-BI1" firstAttribute="top" secondItem="fP8-aJ-uPo" secondAttribute="bottom" constant="20" id="b7F-t0-NZb"/>
                             <constraint firstItem="aKL-kb-aEf" firstAttribute="trailing" secondItem="UcB-2v-MtL" secondAttribute="trailing" id="fwS-Nd-Qph"/>
+                            <constraint firstAttribute="trailing" secondItem="p2u-Gy-BI1" secondAttribute="trailing" id="geh-2A-DOo"/>
                             <constraint firstItem="aKL-kb-aEf" firstAttribute="bottom" secondItem="UcB-2v-MtL" secondAttribute="bottom" id="r1o-Ee-tcM"/>
                             <constraint firstItem="fP8-aJ-uPo" firstAttribute="top" secondItem="v6O-LD-cJK" secondAttribute="bottom" constant="10" id="rtz-Lq-1sv"/>
                             <constraint firstItem="UcB-2v-MtL" firstAttribute="leading" secondItem="aKL-kb-aEf" secondAttribute="leading" id="uc3-MC-qZ7"/>
@@ -351,7 +363,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="aquaman" width="780" height="1170"/>
         <image name="back_arrow" width="75" height="75"/>
         <image name="search_icon" width="98" height="100"/>
     </resources>
