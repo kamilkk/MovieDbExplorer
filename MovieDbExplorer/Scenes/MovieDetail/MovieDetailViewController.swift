@@ -14,7 +14,6 @@ import Nuke
 final class MovieDetailViewController: BaseViewController {
     var viewModel: MovieDetailViewModel!
     
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var headerView: MovieDetailHeaderView!
     @IBOutlet weak var tipsView: MovieDetailTipsView!
     @IBOutlet weak var posterImageView: UIImageView!
@@ -32,7 +31,7 @@ final class MovieDetailViewController: BaseViewController {
                                                backTrigger: backButton.rx.tap.asDriver())
         
         let output = viewModel.transform(input: input)
-        
+
         output.data
             .drive(onNext: { [weak self] data in
                 guard let data = data,
@@ -44,7 +43,7 @@ final class MovieDetailViewController: BaseViewController {
                 }
             })
             .disposed(by: disposeBag)
-        
+
         output.back
             .drive()
             .disposed(by: disposeBag)

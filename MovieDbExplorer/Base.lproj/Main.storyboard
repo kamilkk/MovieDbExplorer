@@ -166,14 +166,14 @@
             <objects>
                 <viewController storyboardIdentifier="MovieDetailViewController" id="dHj-hj-7wY" customClass="MovieDetailViewController" customModule="MovieDbExplorer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mbJ-jP-uul">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KgE-Li-psl">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="876"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tai-Br-SGz" userLabel="Content VIew">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="906"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Uh-Vc-Uaf">
                                                 <rect key="frame" x="20" y="20" width="35" height="35"/>
@@ -218,7 +218,7 @@
                                             <constraint firstItem="1Uh-Vc-Uaf" firstAttribute="top" secondItem="tai-Br-SGz" secondAttribute="top" constant="20" id="HTP-bK-UYj"/>
                                             <constraint firstItem="5B7-h5-4pH" firstAttribute="top" secondItem="RSR-gb-Enn" secondAttribute="bottom" id="NnV-El-zYj"/>
                                             <constraint firstItem="RSR-gb-Enn" firstAttribute="top" secondItem="XFR-xe-0VS" secondAttribute="bottom" id="OID-tJ-4PD"/>
-                                            <constraint firstAttribute="height" constant="667" id="Vct-V0-QMY"/>
+                                            <constraint firstAttribute="height" constant="906" id="Vct-V0-QMY"/>
                                             <constraint firstItem="XFR-xe-0VS" firstAttribute="top" secondItem="tai-Br-SGz" secondAttribute="top" constant="60" id="Vjx-iZ-FKx"/>
                                             <constraint firstAttribute="trailing" secondItem="XFR-xe-0VS" secondAttribute="trailing" id="WVd-JR-6Y9"/>
                                             <constraint firstItem="XFR-xe-0VS" firstAttribute="leading" secondItem="tai-Br-SGz" secondAttribute="leading" id="Wpc-XB-o3l"/>
@@ -247,11 +247,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6l6-HR-e0d"/>
                     </view>
+                    <size key="freeformSize" width="375" height="896"/>
                     <connections>
                         <outlet property="backButton" destination="1Uh-Vc-Uaf" id="CWU-gl-JPv"/>
                         <outlet property="headerView" destination="XFR-xe-0VS" id="bXl-n5-QhB"/>
                         <outlet property="posterImageView" destination="5B7-h5-4pH" id="9vC-w0-QTP"/>
-                        <outlet property="scrollView" destination="KgE-Li-psl" id="oyr-2i-sl3"/>
                         <outlet property="tipsView" destination="RSR-gb-Enn" id="CGI-dP-r7f"/>
                     </connections>
                 </viewController>
