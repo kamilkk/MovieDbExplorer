@@ -6,8 +6,8 @@ target 'MovieDbExplorer' do
   use_frameworks!
 
   # Pods for DataKickExplorer
-  pod 'RxSwift',    '4.4.0'
-  pod 'RxCocoa',    '4.4.0'
+  pod 'RxSwift',    '5.0.1'
+  pod 'RxCocoa',    '5.0.1'
   pod 'Nuke', '~> 7.0'
 
 end

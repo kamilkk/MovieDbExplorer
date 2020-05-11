@@ -28,11 +28,11 @@ final class App {
         tabBarController.tabBar.barTintColor = UiHelpers.appColor()
         tabBarController.tabBar.tintColor = .white
         
-        discoverNavigationController.tabBarItem = UITabBarItem(title: "Discover", image: nil, selectedImage: nil)
+        discoverNavigationController.tabBarItem = UITabBarItem(title: "Discover", image: UIImage(named: "star_tab"), selectedImage: nil)
         discoverNavigationController.viewControllers = [discoverViewController]
         
         searchNavigationController.viewControllers = [searchViewController]
-        searchNavigationController.tabBarItem = UITabBarItem(title: "Search", image: nil, selectedImage: nil)
+        searchNavigationController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "search_tab"), selectedImage: nil)
         
         tabBarController.viewControllers = [
             discoverNavigationController,
